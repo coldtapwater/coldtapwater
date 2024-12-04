@@ -6,21 +6,37 @@
   font-family: 'aaaiight';
   src: url('/fonts/text/aaaiight.ttf') format('truetype');
   font-display: swap;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
+}
+/*Neutral Font*/
+@font-face {
+  font-family: 'paradize';
+  src: url('/fonts/text/paradize.otf') format('truetype');
+  font-display: swap;
+  letter-spacing: 0.02em;
+  font-size: 200;
 }
 
 @font-face {
   font-family: 'aAnotherTag';
   src: url('/fonts/header/aAnotherTag.ttf') format('truetype');
   font-display: swap;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
+}
+
+/*Neutral Header Font*/
+@font-face {
+  font-family: 'TrashHand';
+  src: url('/fonts/header/TrashHand.ttf') format('truetype');
+  font-display: swap;
+  letter-spacing: 0.02em;
 }
 
 @font-face {
   font-family: 'FatWandals_PERSONAL';
   src: url('/fonts/mainName/FatWandals_PERSONAL.ttf') format('truetype');
   font-display: swap;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
 }
 
 :root {
@@ -44,8 +60,46 @@ body {
   position: relative;
   color: var(--text-color);
   overflow-x: hidden;
-  letter-spacing: 1em;
-  line-height: 2.0;
+  letter-spacing: 0.2em;
+  line-height: 1.8;
+}
+
+/* Easy Read Mode Styles */
+body.easy-read h1,
+body.easy-read h2,
+body.easy-read h3,
+body.easy-read h4,
+body.easy-read h5,
+body.easy-read h6 {
+  font-family: 'TrashHand', sans-serif !important;
+  letter-spacing: 0.05em !important;
+}
+
+body.easy-read p,
+body.easy-read span,
+body.easy-read div {
+  font-family: 'paradize', sans-serif !important;
+  letter-spacing: 0.05em !important;
+}
+
+body.easy-read .font-wandals {
+  font-family: 'TrashHand', sans-serif !important;
+  letter-spacing: 0.05em !important;
+}
+
+body.easy-read .font-nav {
+  font-family: 'TrashHand', sans-serif !important;
+  letter-spacing: 0.05em !important;
+}
+
+body.easy-read .font-street {
+  font-family: 'paradize', sans-serif !important;
+  letter-spacing: 0.05em !important;
+}
+
+body.easy-read .font-tag {
+  font-family: 'TrashHand', sans-serif !important;
+  letter-spacing: 0.05em !important;
 }
 
 body::before {
@@ -53,16 +107,25 @@ body::before {
   position: fixed;
   top: 0;
   left: 0;
-  width: 90%;
+  width: 100%;
   height: 100%;
   background-color: rgba(17, 17, 17, 0.85);
   z-index: -1;
+}
+
+.logo-container {
+  min-height: 500px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 button {
   z-index: 1000;
   pointer-events: visible;
 }
+
 .github-link {
   color: white;
   background: black;

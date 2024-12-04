@@ -21,22 +21,14 @@ const Home = () => {
 
         <div className="container mx-auto px-4 z-10">
           <motion.div
-            className="text-center"
+            className="text-center mt-10"
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h1 className="font-wandals text-7xl md:text-9xl mb-8 text-gradient tracking-wider">
+            <motion.h1 className="font-wandals text-7xl md:text-9xl mb-8 text-gradient tracking-wider logo-container">
               ColdTapWater
-            </h1>
-            <motion.p
-              className="font-street text-2xl md:text-3xl text-gray-300 mb-12 tracking-wide leading-relaxed"
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              Code Enthusiast | Art Dabbler | Professional Overthinker
-            </motion.p>
+            </motion.h1>
 
             {/* Animated arrow indicating scroll */}
             <motion.div

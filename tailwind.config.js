@@ -11,7 +11,9 @@ export default {
         'nav': ['aAnotherTag', 'sans-serif'],
         'tag': ['aAnotherTag', 'sans-serif'],
         'street': ['aaaiight', 'sans-serif'],
-        'wandals': ['FatWandals_PERSONAL', 'sans-serif']
+        'wandals': ['FatWandals_PERSONAL', 'sans-serif'],
+        'neutralStreet': ['paradize', 'sans-serif'],
+        'neutralHeaderTag': ['TrashHand', 'sans-serif'],
       },
       animation: {
         'text-slide': 'text-slide 12s linear infinite',
