@@ -44,8 +44,8 @@ body {
   position: relative;
   color: var(--text-color);
   overflow-x: hidden;
-  letter-spacing: 0.025em;
-  line-height: 1.6;
+  letter-spacing: 0.04em;
+  line-height: 2.0;
 }
 
 body::before {
