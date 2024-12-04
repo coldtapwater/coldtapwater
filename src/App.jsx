@@ -9,6 +9,7 @@ import CustomCursor from './components/common/CustomCursor';
 import Home from './pages/Home/Home';
 import Projects from './pages/Projects/Projects';
 import About from './pages/About/About';
+import Art from './pages/Art/Art';
 
 function App() {
   const location = useLocation();
@@ -63,6 +64,16 @@ function App() {
                 transition={{ duration: 0.5 }}
               >
                 <About />
+              </motion.div>
+            } />
+            <Route path="/art" element={
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <Art />
               </motion.div>
             } />
           </Routes>
