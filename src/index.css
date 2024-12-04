@@ -44,7 +44,7 @@ body {
   position: relative;
   color: var(--text-color);
   overflow-x: hidden;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.1em;
   line-height: 2.0;
 }
 
