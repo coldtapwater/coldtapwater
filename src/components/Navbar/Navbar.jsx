@@ -25,14 +25,14 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
           <motion.div
             className="flex-shrink-0"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            <Link to="/" className="font-wandals text-4xl text-gradient tracking-wider">
+            <Link to="/" className="font-street text-3xl text-gradient tracking-wider navbar-container">
               coldtapwater
             </Link>
           </motion.div>

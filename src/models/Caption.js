@@ -13,7 +13,7 @@ class Caption {
     this.description = description;
     this.imageUrl = imageUrl;
     this.category = category; // 'art' or 'photo'
-    this.date = date;
+    this.date = date; // Expecting 'YYYY-MM-DD'
     this.location = location;
   }
 
@@ -35,10 +35,18 @@ class Caption {
     };
   }
 
-  // Helper method to format date
+  // Helper method to format date as Pacific Time
   getFormattedDate() {
     if (!this.date) return '';
-    return new Date(this.date).toLocaleDateString('en-US', {
+
+    // Treat the date as Pacific Time (America/Los_Angeles)
+    const [year, month, day] = this.date.split('-');
+    const pacificDate = new Date(
+      Date.UTC(year, month - 1, day, 0, 0, 0) // Start at midnight UTC
+    );
+
+    return pacificDate.toLocaleDateString('en-US', {
+      timeZone: 'America/Los_Angeles',
       year: 'numeric',
       month: 'long',
       day: 'numeric'
@@ -49,7 +57,7 @@ class Caption {
   validate() {
     const requiredFields = ['id', 'title', 'imageUrl', 'category'];
     const missingFields = requiredFields.filter(field => !this[field]);
-    
+
     if (missingFields.length > 0) {
       throw new Error(`Missing required fields: ${missingFields.join(', ')}`);
     }

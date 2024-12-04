@@ -8,7 +8,7 @@ const SkillTag = ({ name }) => (
 
 const Section = ({ title, children }) => (
   <div className="mb-12">
-    <h2 className="font-tag text-4xl md:text-5xl mb-6 tracking-wider text-gradient">
+    <h2 className="font-tag text-4xl md:text-5xl mb-6 tracking-wider text-gradient homecard-container">
       {title}
     </h2>
     <div className="space-y-4 font-street text-xl text-gray-300 tracking-wide leading-relaxed">

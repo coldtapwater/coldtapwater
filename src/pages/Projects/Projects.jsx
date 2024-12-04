@@ -11,7 +11,7 @@ const ProjectCard = ({ project, isFeatured }) => {
   return (
     <div className={`${isFeatured ? 'col-span-1 md:col-span-2 lg:col-span-2' : ''}`}>
       <div className="bg-black/30 rounded-xl p-8 h-full transform transition-all duration-300 hover:scale-[1.02] hover:bg-black/40 hover:shadow-xl hover:shadow-primary-color/20">
-        <h2 className="font-tag text-4xl md:text-5xl mb-6 tracking-wider text-gradient">
+        <h2 className="font-tag text-4xl md:text-5xl mb-6 tracking-wider text-gradient homecard-container">
           {project.title}
         </h2>
         <div className="space-y-6">

@@ -8,7 +8,7 @@ const Art = () => {
   const { fontStyle } = useFont();
 
   // Use the same font as headers based on fontStyle
-  const headerFont = fontStyle === 'EasyRead' ? 'TrashHand' : 'aAnotherTag';
+  const headerFont = fontStyle === 'EasyRead' ? 'TrashHand' : 'aaaiight';
 
   return (
     <div className="min-h-screen bg-background-color pt-20">
@@ -19,7 +19,7 @@ const Art = () => {
           transition={{ duration: 0.6 }}
         >
           <h1 
-            className="font-tag text-4xl md:text-5xl mb-8 tracking-wider text-gradient text-center"
+            className="font-street text-4xl md:text-5xl mb-8 tracking-wider text-gradient text-center homecard-container"
             style={{ fontFamily: headerFont }}
           >
             Art & Photo Gallery
@@ -45,7 +45,7 @@ const Art = () => {
                     <div className="caption-overlay">
                       <div className="caption-content">
                         <h3 
-                          className="font-tag text-2xl mb-2"
+                          className="font-street text-2xl mb-2"
                           style={{ fontFamily: headerFont }}
                         >
                           {caption.title}

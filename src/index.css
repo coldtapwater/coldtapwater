@@ -171,7 +171,22 @@ body::before {
   @apply text-sm opacity-90;
 }
 
-/* Rest of existing styles... */
+.navbar-container {
+  min-height: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.homecard-container {
+  min-height: 100px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .logo-container {
   min-height: 500px;
   padding: 2rem;
