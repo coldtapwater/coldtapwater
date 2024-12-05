@@ -27,7 +27,7 @@ const Home = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <motion.h1 className="font-wandals text-7xl md:text-9xl mb-8 text-gradient tracking-wider logo-container">
-              ColdTapWater
+              frgmt_
             </motion.h1>
 
             {/* Animated arrow indicating scroll */}

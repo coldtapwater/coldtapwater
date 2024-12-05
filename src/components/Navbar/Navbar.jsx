@@ -33,7 +33,7 @@ const Navbar = () => {
             whileTap={{ scale: 0.9 }}
           >
             <Link to="/" className="font-street text-3xl text-gradient tracking-wider navbar-container">
-              coldtapwater
+              frgmt_
             </Link>
           </motion.div>
           
