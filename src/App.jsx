@@ -6,10 +6,13 @@ import LocomotiveScroll from 'locomotive-scroll';
 // Components
 import Navbar from './components/Navbar/Navbar';
 import CustomCursor from './components/common/CustomCursor';
+import Banner from './components/common/Banner';
 import Home from './pages/Home/Home';
 import Projects from './pages/Projects/Projects';
 import About from './pages/About/About';
 import Art from './pages/Art/Art';
+import SignUp from './pages/SignUp/SignUp';
+import Tools from './pages/Tools/Tools';
 
 function App() {
   const location = useLocation();
@@ -33,6 +36,7 @@ function App() {
     <div className="relative">
       <CustomCursor />
       <Navbar />
+      <Banner />
       <main data-scroll-container>
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
@@ -74,6 +78,26 @@ function App() {
                 transition={{ duration: 0.5 }}
               >
                 <Art />
+              </motion.div>
+            } />
+            <Route path="/signup" element={
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <SignUp />
+              </motion.div>
+            } />
+            <Route path="/tools" element={
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <Tools />
               </motion.div>
             } />
           </Routes>

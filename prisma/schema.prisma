@@ -1,0 +1,42 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String    @id @default(uuid())
+  username  String    @unique
+  email     String    @unique
+  password  String    // Will be hashed with Argon2
+  role      Role      @default(USER)
+  apiKeys   ApiKey[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@map("users")
+}
+
+model ApiKey {
+  id          String    @id @default(uuid())
+  key         String    @unique // Will be encrypted
+  name        String
+  isAdmin     Boolean   @default(false)
+  userId      String
+  user        User      @relation(fields: [userId], references: [id])
+  lastUsed    DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  isRevoked   Boolean   @default(false)
+  expiresAt   DateTime?
+
+  @@map("api_keys")
+}
+
+enum Role {
+  USER
+  ADMIN
+}
