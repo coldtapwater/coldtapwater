@@ -80,26 +80,6 @@ function App() {
                 <Art />
               </motion.div>
             } />
-            <Route path="/signup" element={
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.5 }}
-              >
-                <SignUp />
-              </motion.div>
-            } />
-            <Route path="/tools" element={
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.5 }}
-              >
-                <Tools />
-              </motion.div>
-            } />
           </Routes>
         </AnimatePresence>
       </main>
