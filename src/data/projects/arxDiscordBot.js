@@ -9,7 +9,7 @@ const arxDiscordBot = new Project({
   description: 'A feature-rich economy bot for Discord with integrated games and comprehensive data management. This was my first major programming project, teaching me valuable lessons in data management, user interaction, and game development within a chat platform.',
   shortDescription: 'Economy-focused Discord bot with integrated games',
   technologies: ['Discord.py', 'Python', 'Database Management', 'Game Development'],
-  githubUrl: 'https://github.com/coldtapwater/arx-rw.git',
+  githubUrl: 'https://github.com/frgmt0/arx-rw.git',
   category: 'Bot Development',
   featured: true,
   completionDate: '2024-10-23'
