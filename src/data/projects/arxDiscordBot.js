@@ -11,7 +11,7 @@ const arxDiscordBot = new Project({
   technologies: ['Discord.py', 'Python', 'Database Management', 'Game Development'],
   githubUrl: 'https://github.com/frgmt0/arx-rw.git',
   category: 'Bot Development',
-  featured: true,
+  featured: false,
   completionDate: '2024-10-23'
 });
 

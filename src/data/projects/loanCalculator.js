@@ -11,7 +11,7 @@ const loanCalculator = new Project({
   technologies: ['Rust'],
   githubUrl: 'https://github.com/frgmt0/loans.git',
   category: 'Coding',
-  featured: true,
+  featured: false,
   completionDate: '2024-12-17'
 });
 

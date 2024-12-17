@@ -9,10 +9,9 @@ import CustomCursor from './components/common/CustomCursor';
 import Banner from './components/common/Banner';
 import Home from './pages/Home/Home';
 import Projects from './pages/Projects/Projects';
+import Research from './pages/Projects/Research';
 import About from './pages/About/About';
 import Art from './pages/Art/Art';
-import SignUp from './pages/SignUp/SignUp';
-import Tools from './pages/Tools/Tools';
 
 function App() {
   const location = useLocation();
@@ -58,6 +57,16 @@ function App() {
                 transition={{ duration: 0.5 }}
               >
                 <Projects />
+              </motion.div>
+            } />
+            <Route path="/portfolio/research" element={
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <Research />
               </motion.div>
             } />
             <Route path="/about" element={

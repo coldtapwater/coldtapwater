@@ -11,7 +11,7 @@ const soFragment = new Project({
   technologies: ['Python', 'Machine Learning', 'Artificial Intelligence'],
   githubUrl: 'https://github.com/sofragment',
   category: 'Machine Learning',
-  featured: true,
+  featured: false,
   completionDate: '2024-11-16'
 });
 
