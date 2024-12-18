@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/*Main Font*/
+@font-face {
+  font-family: 'Street Wars Demo';
+  src: url('/fonts/text/Street Wars Demo.ttf') format('truetype');
+  font-display: swap;
+  letter-spacing: 0.02em;
+}
 @font-face {
   font-family: 'aaaiight';
   src: url('/fonts/text/aaaiight.ttf') format('truetype');
