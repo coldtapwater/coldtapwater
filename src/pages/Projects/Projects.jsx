@@ -18,7 +18,14 @@ const ProjectCard = ({ project, isFeatured }) => {
   return (
     <div className={`${isFeatured ? 'col-span-1 md:col-span-2 lg:col-span-2' : ''}`}>
       <div className="bg-black/30 rounded-xl p-8 h-full transform transition-all duration-300 hover:scale-[1.02] hover:bg-black/40 hover:shadow-xl hover:shadow-primary-color/20">
-        <h2 className="font-tag text-4xl md:text-5xl mb-6 tracking-wider text-gradient homecard-container">
+        {isFeatured && project.prevText && (
+          <div className="mb-2 pt-12 pb-4">
+            <h1 className="font-wandals text-6xl md:text-7xl tracking-wider text-gradient homecard-container">
+              {project.prevText}
+            </h1>
+          </div>
+        )}
+        <h2 className={`${isFeatured ? 'font-street text-5xl md:text-6xl' : 'font-tag text-4xl md:text-5xl'} mb-6 tracking-wider text-gradient homecard-container`}>
           {project.title}
         </h2>
         <div className="space-y-6">
@@ -72,7 +79,7 @@ const Projects = () => {
             <ProjectCard 
               key={project.id} 
               project={project} 
-              isFeatured={index === 0}
+              isFeatured={project.featured}
             />
           ))}
 

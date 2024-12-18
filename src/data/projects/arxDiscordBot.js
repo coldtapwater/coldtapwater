@@ -6,6 +6,7 @@ console.log('Creating Arx Discord Bot project...');
 const arxDiscordBot = new Project({
   id: 'arx-discord-bot',
   title: 'Arx',
+  prevText: 'arx_',
   description: 'A feature-rich economy bot for Discord with integrated games and comprehensive data management. This was my first major programming project, teaching me valuable lessons in data management, user interaction, and game development within a chat platform.',
   shortDescription: 'Economy-focused Discord bot with integrated games',
   technologies: ['Discord.py', 'Python', 'Database Management', 'Game Development'],

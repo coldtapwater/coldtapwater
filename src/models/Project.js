@@ -5,7 +5,7 @@ class Project {
     description,
     shortDescription,
     technologies,
-    imageUrl,
+    prevText,
     githubUrl,
     liveUrl,
     category,
@@ -17,7 +17,7 @@ class Project {
     this.description = description;
     this.shortDescription = shortDescription;
     this.technologies = technologies;
-    this.imageUrl = imageUrl;
+    this.prevText = prevText;
     this.githubUrl = this.validateUrl(githubUrl);
     this.liveUrl = liveUrl;
     this.category = category;
@@ -50,7 +50,7 @@ class Project {
       id: this.id,
       title: this.title,
       shortDescription: this.shortDescription,
-      imageUrl: this.imageUrl,
+      prevText: this.prevText,
       technologies: this.technologies,
       category: this.category,
       featured: this.featured,
