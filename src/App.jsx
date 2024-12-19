@@ -12,6 +12,8 @@ import Projects from './pages/Projects/Projects';
 import Research from './pages/Projects/Research';
 import About from './pages/About/About';
 import Art from './pages/Art/Art';
+import Blog from './pages/Blog/Blog';
+import BlogPost from './pages/Blog/BlogPost';
 
 function App() {
   const location = useLocation();
@@ -111,6 +113,28 @@ function App() {
                 className="min-h-full"
               >
                 <Art />
+              </motion.div>
+            } />
+            <Route path="/blog" element={
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+                className="min-h-full"
+              >
+                <Blog />
+              </motion.div>
+            } />
+            <Route path="/blog/:id" element={
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+                className="min-h-full"
+              >
+                <BlogPost />
               </motion.div>
             } />
           </Routes>

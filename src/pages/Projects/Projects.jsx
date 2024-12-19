@@ -25,11 +25,11 @@ const ProjectCard = ({ project, isFeatured }) => {
             </h1>
           </div>
         )}
-        <h2 className={`${isFeatured ? 'font-main text-5xl md:text-6xl' : 'font-tag text-4xl md:text-5xl'} mb-6 tracking-wider text-gradient homecard-container`}>
+        <h2 className={`${isFeatured ? 'text-5xl md:text-6xl' : 'text-4xl md:text-5xl'} mb-6 tracking-wider text-gradient homecard-container`}>
           {project.title}
         </h2>
         <div className="space-y-6">
-          <p className="font-main text-xl text-gray-300 tracking-wide leading-relaxed">
+          <p className="font-borela text-xl text-gray-300 tracking-wide leading-relaxed">
             {project.description}
           </p>
           <div className="flex flex-wrap gap-3">

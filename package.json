@@ -12,7 +12,9 @@
     "dev:api": "nodemon src/api/server.js"
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "@prisma/client": "^6.0.1",
+    "@tailwindcss/typography": "^0.5.15",
     "argon2": "^0.41.1",
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
@@ -26,7 +28,9 @@
     "puppeteer": "^22.8.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.18.0"
+    "react-markdown": "^9.0.1",
+    "react-router-dom": "^6.18.0",
+    "react-syntax-highlighter": "^15.6.1"
   },
   "devDependencies": {
     "@types/locomotive-scroll": "^4.1.3",

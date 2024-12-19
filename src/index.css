@@ -16,6 +16,13 @@
   letter-spacing: 0.02em;
   font-size: 200;
 }
+@font-face {
+  font-family: 'borela';
+  src: url('/fonts/text/BORELA.otf') format('truetype');
+  font-display: swap;
+  letter-spacing: 0.02em;
+  font-size: 200;
+}
 /*Neutral Font*/
 @font-face {
   font-family: 'paradize';
