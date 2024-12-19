@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /*Main Font*/
 @font-face {
   font-family: 'Street Wars Demo';
@@ -11,10 +10,11 @@
   letter-spacing: 0.02em;
 }
 @font-face {
-  font-family: 'aaaiight';
-  src: url('/fonts/text/aaaiight.ttf') format('truetype');
+  font-family: 'main';
+  src: url('/fonts/text/mainText.ttf') format('truetype');
   font-display: swap;
   letter-spacing: 0.02em;
+  font-size: 200;
 }
 /*Neutral Font*/
 @font-face {
@@ -26,8 +26,8 @@
 }
 
 @font-face {
-  font-family: 'aAnotherTag';
-  src: url('/fonts/header/aAnotherTag.ttf') format('truetype');
+  font-family: 'header';
+  src: url('/fonts/header/header.otf') format('truetype');
   font-display: swap;
   letter-spacing: 0.02em;
 }
@@ -41,8 +41,8 @@
 }
 
 @font-face {
-  font-family: 'FatWandals_PERSONAL';
-  src: url('/fonts/mainName/FatWandals_PERSONAL.ttf') format('truetype');
+  font-family: 'logo';
+  src: url('/fonts/mainName/logo.otf') format('truetype');
   font-display: swap;
   letter-spacing: 0.02em;
 }
@@ -53,6 +53,15 @@
   --accent-color: #9933ff;
   --background-color: #111111;
   --text-color: #ffffff;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 html {
@@ -67,9 +76,10 @@ body {
   background-attachment: fixed;
   position: relative;
   color: var(--text-color);
-  overflow-x: hidden;
   letter-spacing: 0.2em;
   line-height: 1.8;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Easy Read Mode Styles */
@@ -124,6 +134,7 @@ body::before {
 /* Art Page Styles */
 .art-container {
   @apply max-w-7xl mx-auto p-8;
+  flex: 1;
 }
 
 .art-title {
@@ -180,7 +191,6 @@ body::before {
 }
 
 .navbar-container {
-  min-height: 20px;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -188,7 +198,6 @@ body::before {
 }
 
 .homecard-container {
-  min-height: 100px;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -196,11 +205,11 @@ body::before {
 }
 
 .logo-container {
-  min-height: 500px;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-height: min-content;
 }
 
 button {

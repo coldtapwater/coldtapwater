@@ -5,8 +5,12 @@ const Research = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Lock body scroll when component mounts
-    document.body.style.overflow = 'hidden';
+    // Disable Locomotive Scroll
+    const scrollContainer = document.querySelector('[data-scroll-container]');
+    if (scrollContainer) {
+      scrollContainer.style.overflow = 'hidden';
+      scrollContainer.style.height = '100vh';
+    }
     
     // Preload the PDF
     const pdfUrl = '/research/main.pdf';
@@ -23,34 +27,40 @@ const Research = () => {
     return () => {
       clearTimeout(timer);
       document.head.removeChild(link);
-      // Restore body scroll when component unmounts
-      document.body.style.overflow = 'unset';
+      // Re-enable Locomotive Scroll
+      if (scrollContainer) {
+        scrollContainer.style.removeProperty('overflow');
+        scrollContainer.style.removeProperty('height');
+      }
     };
   }, []);
 
   return (
-    <div className="fixed inset-0 bg-background-color overflow-hidden">
-      <div className="h-full pt-20">
+    <div className="fixed inset-0 bg-background-color">
+      <div className="h-screen pt-20">
         <div className="container mx-auto px-4 h-full">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="bg-black/30 rounded-xl p-8 h-[calc(100%-3rem)]"
+            className="bg-black/30 rounded-xl p-8 h-[calc(100%-3rem)] flex flex-col"
           >
-            <h1 className="font-tag text-4xl md:text-5xl mb-6 tracking-wider text-gradient">
+            <h1 className="font-tag text-4xl md:text-5xl mb-6 tracking-wider text-gradient flex-shrink-0">
               PRISM Research Paper
             </h1>
             {isLoading ? (
-              <div className="flex justify-center items-center h-[calc(100%-5rem)]">
+              <div className="flex justify-center items-center flex-grow">
                 <div className="text-primary-color font-street text-xl">Loading PDF...</div>
               </div>
             ) : (
-              <div className="w-full h-[calc(100%-5rem)] rounded-lg overflow-hidden">
-                <object
-                  data="/research/main.pdf"
-                  type="application/pdf"
+              <div className="flex-grow w-full rounded-lg overflow-hidden">
+                <iframe
+                  src="/research/main.pdf"
                   className="w-full h-full"
+                  style={{
+                    border: 'none',
+                    backgroundColor: 'transparent'
+                  }}
                 >
                   <p className="text-center py-4 font-street">
                     Your browser doesn't support PDF viewing. You can{' '}
@@ -64,7 +74,7 @@ const Research = () => {
                     </a>
                     .
                   </p>
-                </object>
+                </iframe>
               </div>
             )}
           </motion.div>

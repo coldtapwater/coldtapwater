@@ -26,7 +26,7 @@ const Home = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <motion.h1 className="font-wandals text-7xl md:text-9xl mb-8 text-gradient tracking-wider logo-container">
+            <motion.h1 className="font-logo text-7xl md:text-9xl mb-8 text-gradient tracking-wider logo-container">
               frgmt_
             </motion.h1>
 
@@ -77,7 +77,7 @@ const Home = () => {
               onClick={() => navigate('/portfolio')}
             >
               <h3 className="font-tag text-4xl md:text-5xl mb-6 tracking-wider text-gradient homecard-container">Portfolio</h3>
-              <p className="font-street text-xl text-gray-300 tracking-wide leading-relaxed">Check out my latest work</p>
+              <p className="font-main text-xl text-gray-300 tracking-wide leading-relaxed">Check out my latest work</p>
             </motion.div>
 
             {/* About Link */}
@@ -88,7 +88,7 @@ const Home = () => {
               onClick={() => navigate('/about')}
             >
               <h3 className="font-tag text-4xl md:text-5xl mb-6 tracking-wider text-gradient homecard-container">About</h3>
-              <p className="font-street text-xl text-gray-300 tracking-wide leading-relaxed">Get to know me better</p>
+              <p className="font-main text-xl text-gray-300 tracking-wide leading-relaxed">Get to know me better</p>
             </motion.div>
 
             {/* Art Link */}
@@ -99,7 +99,7 @@ const Home = () => {
               onClick={() => navigate('/art')}
             >
               <h3 className="font-tag text-4xl md:text-5xl mb-6 tracking-wider text-gradient homecard-container">Art</h3>
-              <p className="font-street text-xl text-gray-300 tracking-wide leading-relaxed">Explore my creative side</p>
+              <p className="font-main text-xl text-gray-300 tracking-wide leading-relaxed">Explore my creative side</p>
             </motion.div>
 
             {/* Blog Link */}
@@ -110,7 +110,7 @@ const Home = () => {
               onClick={() => navigate('/blog')}
             >
               <h3 className="font-tag text-4xl md:text-5xl mb-6 tracking-wider text-gradient homecard-container">Blog</h3>
-              <p className="font-street text-xl text-gray-300 tracking-wide leading-relaxed">Read my latest thoughts</p>
+              <p className="font-main text-xl text-gray-300 tracking-wide leading-relaxed">Read my latest thoughts</p>
             </motion.div>
           </motion.div>
         </div>

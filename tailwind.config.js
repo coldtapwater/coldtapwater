@@ -8,10 +8,10 @@ export default {
     extend: {
       fontFamily: {
         'graffiti': ['Street Wars Demo', 'sans-serif'],
-        'nav': ['aaaiight', 'sans-serif'],
-        'tag': ['aaaiight', 'sans-serif'],
-        'street': ['aaaiight', 'sans-serif'],
-        'wandals': ['FatWandals_PERSONAL', 'sans-serif'],
+        'header': ['main', 'sans-serif'],
+        'tag': ['main', 'sans-serif'],
+        'main': ['header', 'sans-serif'],
+        'logo': ['logo', 'sans-serif'],
         'neutralStreet': ['paradize', 'sans-serif'],
         'neutralHeaderTag': ['TrashHand', 'sans-serif'],
       },

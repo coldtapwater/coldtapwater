@@ -9,7 +9,6 @@ const navItems = [
   { name: 'About', path: '/about' },
   { name: 'Art', path: '/art' },
   { name: 'Blog', path: '/blog' },
-  { name: 'Sign Up', path: '/signup' },
 ];
 
 const Navbar = () => {
@@ -33,7 +32,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            <Link to="/" className="font-street text-3xl text-gradient tracking-wider navbar-container">
+            <Link to="/" className="font-logo text-3xl text-gradient tracking-wider navbar-container">
               frgmt_
             </Link>
           </motion.div>
@@ -49,7 +48,7 @@ const Navbar = () => {
                 >
                   <Link
                     to={item.path}
-                    className="font-nav text-2xl text-gray-300 hover:text-white transition-colors duration-300 tracking-wider"
+                    className="font-header text-2xl text-gray-300 hover:text-white transition-colors duration-300 tracking-wider"
                   >
                     {item.name}
                   </Link>
@@ -130,7 +129,7 @@ const Navbar = () => {
               <Link
                 to={item.path}
                 onClick={closeMobileMenu}
-                className="font-nav text-xl text-gray-300 hover:text-white block px-4 py-3 rounded-md tracking-wider transition-colors duration-300"
+                className="font-header text-xl text-gray-300 hover:text-white block px-4 py-3 rounded-md tracking-wider transition-colors duration-300"
               >
                 {item.name}
               </Link>

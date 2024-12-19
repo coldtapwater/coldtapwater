@@ -22,21 +22,40 @@ function App() {
       el: document.querySelector('[data-scroll-container]'),
       smooth: true,
       multiplier: 1,
-      lerp: 0.1
+      lerp: 0.1,
+      scrollFromAnywhere: true,
+      resetNativeScroll: true
     });
+
+    // Update scroll on route change
+    const handleRouteChange = () => {
+      if (scroll) {
+        scroll.update();
+        scroll.scrollTo(0, { duration: 0, disableLerp: true });
+      }
+    };
+
+    handleRouteChange();
 
     // Cleanup
     return () => {
       if (scroll) scroll.destroy();
     };
-  }, []);
+  }, [location.pathname]); // Re-initialize on route change
 
   return (
-    <div className="relative">
+    <div className="min-h-screen flex flex-col relative">
       <CustomCursor />
       <Navbar />
       <Banner />
-      <main data-scroll-container>
+      <main 
+        data-scroll-container
+        className="flex-1 relative"
+        style={{ 
+          minHeight: '100vh',
+          overflow: 'hidden'
+        }}
+      >
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={
@@ -45,6 +64,7 @@ function App() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
+                className="min-h-full"
               >
                 <Home />
               </motion.div>
@@ -55,6 +75,7 @@ function App() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
+                className="min-h-full"
               >
                 <Projects />
               </motion.div>
@@ -65,6 +86,7 @@ function App() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
+                className="min-h-full"
               >
                 <Research />
               </motion.div>
@@ -75,6 +97,7 @@ function App() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
+                className="min-h-full"
               >
                 <About />
               </motion.div>
@@ -85,6 +108,7 @@ function App() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
+                className="min-h-full"
               >
                 <Art />
               </motion.div>

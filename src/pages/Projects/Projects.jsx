@@ -20,23 +20,23 @@ const ProjectCard = ({ project, isFeatured }) => {
       <div className="bg-black/30 rounded-xl p-8 h-full transform transition-all duration-300 hover:scale-[1.02] hover:bg-black/40 hover:shadow-xl hover:shadow-primary-color/20">
         {isFeatured && project.prevText && (
           <div className="mb-2 pt-12 pb-4">
-            <h1 className="font-wandals text-6xl md:text-7xl tracking-wider text-gradient homecard-container">
+            <h1 className="font-logo text-6xl md:text-7xl tracking-wider text-gradient homecard-container">
               {project.prevText}
             </h1>
           </div>
         )}
-        <h2 className={`${isFeatured ? 'font-street text-5xl md:text-6xl' : 'font-tag text-4xl md:text-5xl'} mb-6 tracking-wider text-gradient homecard-container`}>
+        <h2 className={`${isFeatured ? 'font-main text-5xl md:text-6xl' : 'font-tag text-4xl md:text-5xl'} mb-6 tracking-wider text-gradient homecard-container`}>
           {project.title}
         </h2>
         <div className="space-y-6">
-          <p className="font-street text-xl text-gray-300 tracking-wide leading-relaxed">
+          <p className="font-main text-xl text-gray-300 tracking-wide leading-relaxed">
             {project.description}
           </p>
           <div className="flex flex-wrap gap-3">
             {project.technologies.map((tech, index) => (
               <span
                 key={index}
-                className="px-3 py-1 bg-primary-color/20 rounded-full font-street text-sm tracking-wider"
+                className="px-3 py-1 bg-primary-color/20 rounded-full font-main text-sm tracking-wider"
               >
                 {tech}
               </span>
@@ -48,7 +48,7 @@ const ProjectCard = ({ project, isFeatured }) => {
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-6 py-3 bg-primary-color/10 hover:bg-primary-color/20 border-2 border-primary-color/30 hover:border-primary-color rounded-lg text-white hover:text-primary-color font-street text-xl transition-all duration-300 hover:-translate-y-1 github-link"
+                className="inline-flex items-center gap-3 px-6 py-3 bg-primary-color/10 hover:bg-primary-color/20 border-2 border-primary-color/30 hover:border-primary-color rounded-lg text-white hover:text-primary-color font-main text-xl transition-all duration-300 hover:-translate-y-1 github-link"
               >
                 <span>View on GitHub</span>
                 <GitHubIcon />
@@ -57,7 +57,7 @@ const ProjectCard = ({ project, isFeatured }) => {
             {project.liveUrl && (
               <Link
                 to={project.liveUrl}
-                className="inline-flex items-center gap-3 px-6 py-3 bg-primary-color/10 hover:bg-primary-color/20 border-2 border-primary-color/30 hover:border-primary-color rounded-lg text-white hover:text-primary-color font-street text-xl transition-all duration-300 hover:-translate-y-1 github-link"
+                className="inline-flex items-center gap-3 px-6 py-3 bg-primary-color/10 hover:bg-primary-color/20 border-2 border-primary-color/30 hover:border-primary-color rounded-lg text-white hover:text-primary-color font-main text-xl transition-all duration-300 hover:-translate-y-1 github-link"
               >
                 <span>View Research</span>
                 <DocumentIcon />
@@ -86,12 +86,12 @@ const Projects = () => {
           {allProjects.length < 3 && (
             <>
               <div className="opacity-30 bg-black/30 rounded-xl p-8 flex items-center justify-center">
-                <p className="font-street text-xl text-gray-300 tracking-wide">
+                <p className="font-main text-xl text-gray-300 tracking-wide">
                   More projects coming soon...
                 </p>
               </div>
               <div className="opacity-30 bg-black/30 rounded-xl p-8 flex items-center justify-center">
-                <p className="font-street text-xl text-gray-300 tracking-wide">
+                <p className="font-main text-xl text-gray-300 tracking-wide">
                   More projects coming soon...
                 </p>
               </div>
