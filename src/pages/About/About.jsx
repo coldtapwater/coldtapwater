@@ -11,7 +11,7 @@ const Section = ({ title, children }) => (
     <h2 className="font-header text-4xl md:text-5xl mb-6 tracking-wider text-gradient homecard-container">
       {title}
     </h2>
-    <div className="space-y-4 font-main text-xl text-gray-300 tracking-wide leading-relaxed">
+    <div className="space-y-4 font-sans text-xl text-gray-300 tracking-wide leading-relaxed">
       {children}
     </div>
   </div>
