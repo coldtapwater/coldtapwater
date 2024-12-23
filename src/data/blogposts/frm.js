@@ -31,23 +31,35 @@ why XML? because teaching srn to understand one syntax is better than teaching i
 ## the master plan (*or at least part of it*)
 
 fRM isn't just about making databases play nice with TypeScript—it's about building a bridge between AI and data. imagine:
+
 • AI that can actually understand database schemas (*without having an existential crisis*)
+
 • models that can create and modify data structures on the fly
+
 • automated data handling that doesn't end in tears
+
 
 the real magic happens when srn gets involved. by using XML for schema definitions, we're not just making another ORM—we're creating a language that both humans and AI can understand. *revolutionary? maybe. practical? definitely.*
 
 ## current progress: baby steps toward skynet (*kidding... mostly*)
 
 right now, fRM is laying the groundwork:
+
 • solid TypeScript foundation (*because types are friends*)
+
 • SQLite support that just works
+
 • schema management that won't make future AI overlords angry
 
+
 but the future? that's where things get interesting:
+
 • AI-friendly schema definitions
+
 • cross-database compatibility (*because commitment is hard*)
+
 • real-time data handling that even srn can handle
+
 
 ## why this matters (*besides the obvious robot uprising prevention*)
 
