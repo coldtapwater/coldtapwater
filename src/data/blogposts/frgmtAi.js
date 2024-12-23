@@ -67,7 +67,7 @@ Thanks for stopping by **frgmt_**, where the AI is sharp, the sarcasm is sharper
   tags: ['AI', 'SRN', 'SLT-', 'fRM', 'Rust', 'Modular AI', 'Lightweight AI', 'AI Systems'],
   publishDate: '2024-12-19',
   category: 'Technology',
-  featured: true,
+  featured: false,
   authorId: 'frgmt0'
 });
 

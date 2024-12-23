@@ -1,12 +1,14 @@
 import frgmtAi from './frgmtAi';
 import prismBlogPost from './prism';
+import frm from './frm';
 // import webPerformance from './webPerformance';
 
 // Add all blog posts to this array
 // The order here determines the display order in the blog list
 const allBlogPosts = [
   frgmtAi,
-  prismBlogPost
+  prismBlogPost,
+  frm
   // webPerformance,
   // Add new blog posts here
 ];
